@@ -5,7 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Nearby"
-    android:background="@color/black">
+    android:background="@color/white_bg">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_bold"
+        android:text="Nearby station"
+        android:id="@+id/text"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="20dp"
+        android:textAlignment="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_regular"
+        android:text="We could not find any stations. Check your internet connection or location settings (access required)."
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:layout_marginTop="15dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:id="@+id/text1"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/text"/>
+
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -16,6 +45,7 @@
         android:id="@+id/bottom_navigation"
         app:menu="@menu/bottom_menu"
         app:itemTextColor="@drawable/bottom_sel"
-        app:itemIconTint="@drawable/bottom_sel"/>
+        app:itemIconTint="@drawable/bottom_sel"
+        android:background="@color/white"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

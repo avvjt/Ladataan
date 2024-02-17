@@ -5,8 +5,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Map"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:fitsSystemWindows="true">
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_qr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_qr_code"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="20dp"
+        app:shapeAppearanceOverlay="@style/fab_3_rounded"
+        android:backgroundTint="@color/sky"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_crt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/floating_qr"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/ic_my_location"
+        android:layout_marginRight="20dp"
+        android:onClick="floating_crt"
+        app:shapeAppearanceOverlay="@style/fab_3_rounded"
+        android:backgroundTint="@color/white"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_sheet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:layout_constraintBottom_toBottomOf="@+id/frame_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_filter"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:onClick="floating_sheet"
+        app:shapeAppearanceOverlay="@style/fab_3_rounded"
+        android:backgroundTint="@color/white"
+        android:tint="@null"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floating_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_search_black_24"
+        android:layout_marginRight="20dp"
+        android:onClick="floating_search"
+        app:shapeAppearanceOverlay="@style/fab_3_rounded"
+        android:backgroundTint="@color/white"/>
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/frame_layout"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+
+    </FrameLayout>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -16,6 +89,8 @@
         android:id="@+id/bottom_navigation"
         app:menu="@menu/bottom_menu"
         app:itemTextColor="@drawable/bottom_sel"
-        app:itemIconTint="@drawable/bottom_sel"/>
+        app:itemIconTint="@drawable/bottom_sel"
+        android:background="@color/white"
+        android:elevation="5dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
